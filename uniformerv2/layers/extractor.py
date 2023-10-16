@@ -3,9 +3,9 @@ import tensorflow as tf
 from tensorflow import keras 
 from tensorflow.keras import layers
 
-from layers import TFDropPath
-from layers import TFQuickGELU
-from layers import TFMultiheadAttention
+from .drop_path import TFDropPath
+from .gelu import TFQuickGELU
+from .multi_head_attention import TFMultiheadAttention
 
 class TFExtractor(keras.Model):
     def __init__(
@@ -37,7 +37,9 @@ class TFExtractor(keras.Model):
         self.attn_mask = attn_mask
 
     def attention(self, x, y):
-        return self.attn(query=x, key=y, value=y, attention_mask=self.attn_mask)
+        return self.attn(
+            query=x, key=y, value=y, attention_mask=self.attn_mask
+        )
 
     def call(self, x, y, training=None):
         x = x + self.drop_path(self.attention(self.ln_1(x), self.ln_3(y)), training=training)

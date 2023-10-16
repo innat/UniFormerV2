@@ -4,7 +4,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras import initializers
 
-from blocks import TFTransformer
+from uniformerv2.blocks import TFTransformer
 
 class TFVisionTransformer(keras.Model):
     def __init__(

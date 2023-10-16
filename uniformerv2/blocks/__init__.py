@@ -1,3 +1,3 @@
 
-from transformer import TFTransformer
-from residual_attention import TFResidualAttentionBlock
+from .transformer import TFTransformer
+from .residual_attention import TFResidualAttentionBlock

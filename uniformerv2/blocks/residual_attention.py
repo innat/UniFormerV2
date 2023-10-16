@@ -3,10 +3,10 @@ import tensorflow as tf
 from tensorflow import keras 
 from tensorflow.keras import layers
 
-from layers import TFDropPath
-from layers import TFQuickGELU
-from layers import TFLocalMultiHeadRelationAggregator
-from layers import TFMultiheadAttention
+from ..layers import TFDropPath
+from ..layers import TFQuickGELU
+from ..layers import TFLocalMultiHeadRelationAggregator
+from ..layers import TFMultiheadAttention
 
 
 class TFResidualAttentionBlock(keras.Model):

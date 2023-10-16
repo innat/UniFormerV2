@@ -3,8 +3,8 @@ import tensorflow as tf
 from tensorflow import keras 
 from tensorflow.keras import layers
 
-from layers import TFExtractor
-from blocks import TFResidualAttentionBlock
+from ..layers import TFExtractor
+from .residual_attention import TFResidualAttentionBlock
 
 
 class TFTransformer(keras.Model):
