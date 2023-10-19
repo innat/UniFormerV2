@@ -32,7 +32,7 @@ class TFVisionTransformer(keras.Model):
         mlp_factor=4.0, 
         drop_path_rate=0.,
         mlp_dropout=[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5], 
-        cls_dropout=0.5, 
+        cls_dropout=0.5, # dropout for the final classification layer
         num_classes=400,
         frozen=False,
         **kwargs

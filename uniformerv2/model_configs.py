@@ -4,12 +4,12 @@ MODEL_CONFIGS = {
         'input_shape':224,
         'num_classes':400,
         'input_frame':8,
-        'n_layers':4,
-        'return_list':[8, 9, 10, 11],
-        'mlp_dropout':[0.5, 0.5, 0.5, 0.5],
-        'no_lmhra':True,
+        'n_layers':4, # number of global UniBlocks
+        'return_list':[8, 9, 10, 11], # layer index for inserting global UniBlocks
+        'mlp_dropout':[0.5, 0.5, 0.5, 0.5], # dropout for each global UniBlocks
+        'no_lmhra':True, # whether adding local MHRA in the local UniBlocks
         'double_lmhra':True,
-        'temporal_downsample':False,
+        'temporal_downsample':False,  # whether using temporal downsampling in the patch embedding
     }, 
     "K400_K710_B16_8x224": {
         'input_shape':224,
