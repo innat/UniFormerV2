@@ -70,7 +70,7 @@ A classification results on a sample from [Kinetics-400](https://www.deepmind.co
 
 **Fine Tune**
 
-Each videoswin checkpoints returns `logits`. We can just add a custom classifier on top of it. For example,
+Each uniformerv2 checkpoints returns `logits`. We can just add a custom classifier on top of it. A sample view is shown below. See the above notebook for more details.
 
 ```python
 from uniformerv2 import UniFormerV2
@@ -96,7 +96,7 @@ model.predict(...)
 
 # Model Zoo
 
-The uniformer-v2 checkpoints are listed in [MODEL_ZOO.md](MODEL_ZOO.md). Following are some hightlights.
+The uniformer-v2 checkpoints are listed in [MODEL_ZOO.md](MODEL_ZOO.md). 
 
 
 
