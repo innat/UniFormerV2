@@ -5,6 +5,7 @@ from tensorflow.keras import layers
 from tensorflow.keras import initializers
 
 from uniformerv2.blocks import TFTransformer
+from .model_configs import MODEL_CONFIGS
 
 class TFVisionTransformer(keras.Model):
     def __init__(
@@ -120,3 +121,55 @@ class TFVisionTransformer(keras.Model):
         return keras.Model(
             inputs=[x], outputs=self.call(x)
         )
+    
+
+
+def UniFormerV2(name='K400_B16_8x224'):
+    # get model variants specific config.
+    config = MODEL_CONFIGS[name].copy()
+
+    # set general config.
+    dw_reduction=1.5
+    backbone_drop_path_rate=0.
+    mlp_factor=4.0
+    drop_path_rate=0.
+    cls_dropout=0.5
+
+    # get model size specific config.
+    if 'B' in name:
+        patch_size=16
+        width=768
+        heads=12
+        n_head=12
+        n_dim=768
+        output_dim=512
+        vit_layers=12
+    elif 'L' in name:
+        patch_size=14
+        width=1024
+        heads=16
+        n_head=16
+        n_dim=1024
+        output_dim=768
+        vit_layers=24
+    else:
+        raise ValueError(
+            'UniFormerV2 has only base and large variants.'
+        )
+
+    model = TFVisionTransformer(
+        patch_size=patch_size,
+        width=width,
+        vit_layers=vit_layers,
+        heads=heads,
+        output_dim=output_dim,
+        n_dim=n_dim, 
+        n_head=n_head, 
+        mlp_factor=mlp_factor, 
+        drop_path_rate=drop_path_rate, 
+        dw_reduction=dw_reduction, 
+        backbone_drop_path_rate=backbone_drop_path_rate, 
+        cls_dropout=cls_dropout,
+        **config
+    )
+    return model

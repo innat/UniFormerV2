@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="videoswin",
+    name="uniformerv2",
     packages=find_packages(exclude=["notebooks", "assets"]),
     version="1.0.0",
     license="MIT",
