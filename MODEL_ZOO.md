@@ -1,11 +1,11 @@
 # Model Zoo
 
-## Note
+Some note:
 
--  \#Frame = \#input_frame x \#crop x \#clip
-  - \#input_frame means how many frames are input for model per inference
-  - \#crop means spatial crops (e.g., 3 for left/right/center)
-  - \#clip means temporal clips (e.g., 4 means repeted sampling four clips with different start indices)
+-  `Frame = input_frame x crop x clip`
+  - `input_frame` means how many frames are input for model per inference
+  - `crop` means spatial crops (e.g., 3 for left/right/center)
+  - `clip` means temporal clips (e.g., 4 means repeted sampling four clips with different start indices)
 
 ## K710
 
