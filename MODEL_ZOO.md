@@ -85,7 +85,7 @@
 ## HACS
 
 | Model | Pretraining  | #Frame  | Top-1 | Checkpoints  | Config  |
-| ---------------- | ----- | ------- | ----- | ----------- |
+| ---------------- | ----- | ------- | ----- | ----------- | ----------- 
 | UniFormerV2-L/14 | CLIP-400M+K710+K400 | 16x3x10 | 95.5  | [SavedModel]()/[h5]() |
 | UniFormerV2-L/14 | CLIP-400M+K710+K400 | 32x3x10 | 95.4  | [SavedModel]()/[h5]() |
 
