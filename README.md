@@ -17,11 +17,11 @@ This is unofficial `keras` implementation of [**UniFormerV2: Spatiotemporal Lear
 ## News
 
 - **[20-10-2023]**: GPU(s), TPU-VM for fine-tune training are supported, [colab](https://github.com/innat/UniFormerV2/blob/main/notebooks/uniformerv2_video_classification.ipynb).
-- **[19-10-2023]**: UniFormerV2 checkpoints for [ActivityNet](http://activity-net.org/) and [HACS](http://hacs.csail.mit.edu/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
-- **[18-10-2023]**: UniFormerV2 checkpoints for [K710](https://github.com/OpenGVLab/UniFormerV2/blob/main/DATASET.md#kinetics-710) and [Moments in Time](http://moments.csail.mit.edu/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
-- **[17-10-2023]**: UniFormerV2 checkpoints for [SSV2](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics-600/700](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
-- **[16-10-2023]**: UniFormerV2 checkpoints for [Kinetics-400](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
-- **[15-10-2023]**: Code of UniFormerV2 in Keras becomes available.
+- **[19-10-2023]**: UFV2 checkpoints for [ActivityNet](http://activity-net.org/) and [HACS](http://hacs.csail.mit.edu/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
+- **[18-10-2023]**: UFV2 checkpoints for [K710](https://github.com/OpenGVLab/UniFormerV2/blob/main/DATASET.md#kinetics-710) and [Moments in Time](http://moments.csail.mit.edu/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
+- **[17-10-2023]**: UFV2 checkpoints for [SSV2](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics-600/700](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
+- **[16-10-2023]**: UFV2 checkpoints for [Kinetics-400](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
+- **[15-10-2023]**: Code of UniFormerV2 (UFV2) in Keras becomes available.
 
 
 # Install
