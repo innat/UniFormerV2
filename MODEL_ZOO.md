@@ -68,12 +68,12 @@
 
 ## Something-Something V2
 
-| Model | Pretraining | #Frame | Top-1 | Checkpoints  | Shell   | Config  |
-| --- | ----------- | ------ | ----- | -------- | ---------- | ------- |
-| UniFormerV2-B/16 | CLIP-400M   | 16x3x1 | 69.5  | [SavedModel]()/[h5]() | [run.sh](./exp/sthv2/ssv2_b16_f16x224/run.sh) | ? |
-| UniFormerV2-B/16 | CLIP-400M   | 32x3x1 | 70.7  | [SavedModel]()/[h5]() | [run.sh](./exp/sthv2/ssv2_b16_f32x224/run.sh) | ? |
-| UniFormerV2-L/14 | CLIP-400M   | 16x3x1 | 72.1  | [SavedModel]()/[h5]() | [run.sh](./exp/sthv2/ssv2_l14_f16x224/run.sh) | ? |
-| UniFormerV2-L/14 | CLIP-400M   | 32x3x1 | 73.0  | [SavedModel]()/[h5]() | [run.sh](./exp/sthv2/ssv2_l14_f32x224/run.sh) | ? |
+| Model | Pretraining | #Frame | Top-1 | Checkpoints  | Config  |
+| --- | ----------- | ------ | ----- | -------- | ---------- | 
+| UniFormerV2-B/16 | CLIP-400M   | 16x3x1 | 69.5  | [SavedModel]()/[h5]() | ? |
+| UniFormerV2-B/16 | CLIP-400M   | 32x3x1 | 70.7  | [SavedModel]()/[h5]() | ? |
+| UniFormerV2-L/14 | CLIP-400M   | 16x3x1 | 72.1  | [SavedModel]()/[h5]() | ? |
+| UniFormerV2-L/14 | CLIP-400M   | 32x3x1 | 73.0  | [SavedModel]()/[h5]() | ? |
 
 ## ActivityNet
 
