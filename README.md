@@ -1,10 +1,13 @@
 # UniFormerV2
 
-[](./assets/framework.png)
 
-UniFormerV2, a generic paradigm to build a powerful family of video networks, by arming the pre-trained [**ViTs**](https://github.com/google-research/vision_transformer) with efficient [**UniFormer**](https://github.com/Sense-X/UniFormer) designs. It gets the state-of-the-art recognition performance on **8** popular video benchmarks, including scene-related Kinetics-400/600/700 and Moments in Time, temporal-related Something-Something V1/V2, untrimmed ActivityNet and HACS. In particular, **it is the first model to achieve 90% top-1 accuracy on Kinetics-400.**
+![](assets/framework.png)
+
+
+**UniFormerV2**, a generic paradigm to build a powerful family of video networks, by arming the pre-trained [**ViTs**](https://github.com/google-research/vision_transformer) with efficient [**UniFormer**](https://github.com/Sense-X/UniFormer) designs. It gets the state-of-the-art recognition performance on **8** popular video benchmarks, including scene-related [Kinetics-400/600/700](https://www.deepmind.com/open-source/kinetics) and [Moments in Time](http://moments.csail.mit.edu/), temporal-related [Something-Something V1/V2](https://developer.qualcomm.com/software/ai-datasets/something-something), untrimmed [ActivityNet](http://activity-net.org/) and [HACS](http://hacs.csail.mit.edu/). In particular, **it is the first model to achieve 90% top-1 accuracy on Kinetics-400.**
 
 This is unofficial `keras` implementation of [**UniFormerV2: Spatiotemporal Learning by Arming Image ViTs with Video UniFormer.**](https://arxiv.org/abs/2211.09552). The official PyTorch code is [here](https://github.com/OpenGVLab/UniFormerV2).
+
 
 
 ## News
@@ -44,4 +47,57 @@ TensorShape([1, 400])
     for i in np.argsort(probabilities)[::-1]
 }
 >>> confidences
+```
+
+**Fine Tune**
+
+Each videoswin checkpoints returns `logits`. We can just add a custom classifier on top of it. For example,
+
+```python
+from uniformerv2 import UniFormerV2
+
+# import pretrained model, i.e.
+model_name = 'ANET_L14_16x224'
+uniformer_v2 = UniFormerV2(name=model_name)
+uniformer_v2.load_weights(f'TFUniFormerV2_{model_name}.h5')
+uniformer_v2.trainable = False
+
+# downstream model
+model = keras.Sequential([
+    uniformer_v2,
+    layers.Dense(
+        len(class_folders), dtype='float32', activation=None
+    )
+])
+model.compile(...)
+model.fit(...)
+model.predict(...)
+
+```
+
+# Model Zoo
+
+The uniformer-v2 checkpoints are listed in [MODEL_ZOO.md](MODEL_ZOO.md). Following are some hightlights.
+
+
+
+# TODO
+- [x] Custom fine-tuning code.
+- [ ] Publish on TF-Hub.
+- [ ] Support `Keras V3` to support multi-framework backend.
+
+
+##  Citation
+
+If you use this videoswin implementation in your research, please cite it using the metadata from our `CITATION.cff` file.
+
+```swift
+@misc{li2022uniformerv2,
+      title={UniFormerV2: Spatiotemporal Learning by Arming Image ViTs with Video UniFormer}, 
+      author={Kunchang Li and Yali Wang and Yinan He and Yizhuo Li and Yi Wang and Limin Wang and Yu Qiao},
+      year={2022},
+      eprint={2211.09552},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
