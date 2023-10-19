@@ -4,6 +4,10 @@
 ![](assets/framework.png)
 
 
+[![Palestine](https://img.shields.io/badge/Free-Palestine-white?labelColor=green)](https://twitter.com/search?q=%23FreePalestine&src=typed_query)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2211.09552-darkred)](https://arxiv.org/abs/2211.09552) [![keras-2.12.](https://img.shields.io/badge/keras-2.12-darkred)]([?](https://img.shields.io/badge/keras-2.12-darkred)) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](?) [![HugginFace badge](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg)](?) [![HugginFace badge](https://img.shields.io/badge/🤗%20Hugging%20Face-Hub-yellow.svg)](?)
+
 **UniFormerV2**, a generic paradigm to build a powerful family of video networks, by arming the pre-trained [**ViTs**](https://github.com/google-research/vision_transformer) with efficient [**UniFormer**](https://github.com/Sense-X/UniFormer) designs. It gets the state-of-the-art recognition performance on **8** popular video benchmarks, including scene-related [Kinetics-400/600/700](https://www.deepmind.com/open-source/kinetics) and [Moments in Time](http://moments.csail.mit.edu/), temporal-related [Something-Something V1/V2](https://developer.qualcomm.com/software/ai-datasets/something-something), untrimmed [ActivityNet](http://activity-net.org/) and [HACS](http://hacs.csail.mit.edu/). In particular, **it is the first model to achieve 90% top-1 accuracy on Kinetics-400.**
 
 This is unofficial `keras` implementation of [**UniFormerV2: Spatiotemporal Learning by Arming Image ViTs with Video UniFormer.**](https://arxiv.org/abs/2211.09552). The official PyTorch code is [here](https://github.com/OpenGVLab/UniFormerV2).
