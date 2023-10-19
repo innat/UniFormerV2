@@ -60,9 +60,10 @@ TensorShape([1, 400])
 
 A classification results on a sample from [Kinetics-400](https://www.deepmind.com/open-source/kinetics).
 
-| Video | Top-5 |
-|:---:|:---|
-| ![](./assets/view1.gif) | <pre>{<br>    'playing_cello': 0.9941741824150085,<br>    'playing_violin': 0.0016851733671501279,<br>    'playing_recorder': 0.0011555481469258666,<br>    'playing_clarinet': 0.0009695519111119211,<br>    'playing_harp': 0.0007713600643910468<br>}</pre> |
+| Video                          | Top-5 |
+|:------------------------------:|:-----|
+| ![](./assets/view1.gif)        | <pre>{<br>    'playing cello': 0.9992249011,<br>    'playing violin': 0.00016990336,<br>    'playing clarinet': 6.66150512e-05,<br>    'playing harp': 4.858616014e-05,<br>    'playing bass guitar': 2.0927140212e-05<br>}</pre> |
+
 
 **Fine Tune**
 
