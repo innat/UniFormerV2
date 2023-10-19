@@ -24,7 +24,7 @@ This is unofficial `keras` implementation of [**UniFormerV2: Spatiotemporal Lear
 - **[17-10-2023]**: UFV2 checkpoints for [SSV2](https://developer.qualcomm.com/software/ai-datasets/something-something) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
 - **[17-10-2023]**: UFV2 checkpoints for [Kinetics-600/700](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
 - **[16-10-2023]**: UFV2 checkpoints for [Kinetics-400](https://www.deepmind.com/open-source/kinetics) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
-- **[15-10-2023]**: Code of UniFormerV2 (UFV2) in Keras becomes available.
+- **[15-10-2023]**: Code of UniFormerV2 (**UFV2**) in Keras becomes available.
 
 
 # Install
