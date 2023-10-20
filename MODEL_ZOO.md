@@ -15,7 +15,6 @@ Some note:
 | UniFormerV2-L/14            | 8     | [SavedModel]()/[h5](https://github.com/innat/UniFormerV2/releases/download/v1.0/TFUniFormerV2_K710_L14_8x224.h5) | [cfg](https://github.com/OpenGVLab/UniFormerV2/blob/main/exp/k710/k710_l14_f8x224/config.yaml) |
 | UniFormerV2-L/14@336        | 8     | [SavedModel]()/[h5](https://github.com/innat/UniFormerV2/releases/download/v1.0/TFUniFormerV2_K710_L14_8x336.h5) | [cfg](https://github.com/OpenGVLab/UniFormerV2/blob/main/exp/k710/k710_l14_f8x336/config.yaml) |
 
-
 ## K400
 
 | Model    | Pretraining  | #Frame | Top-1 | Checkpoints | Config   |
@@ -89,3 +88,30 @@ Some note:
 | UniFormerV2-L/14 | CLIP-400M+K710+K400 | 16x3x10 | 95.5  | [SavedModel]()/[h5](https://github.com/innat/UniFormerV2/releases/download/v1.0/TFUniFormerV2_HACS_L14_16x224.h5) | [cfg](https://github.com/OpenGVLab/UniFormerV2/blob/main/exp/hacs/hacs_l14_16x224/config.yaml) |
 | UniFormerV2-L/14 | CLIP-400M+K710+K400 | 32x3x10 | 95.4  | [SavedModel]()/[h5](https://github.com/innat/UniFormerV2/releases/download/v1.0/TFUniFormerV2_HACS_L14_32x224.h5) | [cfg](https://github.com/OpenGVLab/UniFormerV2/blob/main/exp/hacs/hacs_l14_32x224/config.yaml) |
 
+
+
+## Weight Comparison
+
+The `torch` uniformerv2 model can be loaded from the official [repo](https://github.com/OpenGVLab/UniFormerV2). Following are some quick test of both implementation showing logit matching.
+
+```python
+input = np.random.rand(4, 16, 224, 224, 3).astype('float32')
+inputs = torch.tensor(input)
+inputs = torch.einsum('nthwc->ncthw', inputs)
+# inputs.shape: torch.Size([4, 3, 16, 224, 224])
+
+# torch model
+model_pt.eval()
+x = model_torch(inputs.float())
+x = x.detach().numpy()
+x.shape # (4, 339) (Moments in Time dataset)
+
+# keras model
+y = model_keras(input, training=False)
+y = y.numpy()
+y.shape # (4, 339) (Moments in Time dataset)
+
+np.testing.assert_allclose(x, y, 1e-4, 1e-4)
+np.testing.assert_allclose(x, y, 1e-5, 1e-5)
+# OK
+```
