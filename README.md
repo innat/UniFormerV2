@@ -108,7 +108,7 @@ The uniformer-v2 checkpoints are listed in [MODEL_ZOO.md](MODEL_ZOO.md).
 
 ##  Citation
 
-If you use this videoswin implementation in your research, please cite it using the metadata from our `CITATION.cff` file.
+If you use this uniformerv2 implementation in your research, please cite it using the metadata from our `CITATION.cff` file.
 
 ```swift
 @misc{li2022uniformerv2,
