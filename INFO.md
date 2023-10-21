@@ -6,6 +6,8 @@ From official [source](https://github.com/OpenGVLab/UniFormerV2/blob/main/INSTRU
 - For those **scene-related** datasets (e.g., Kinetics), they **ONLY** add global UniBlocks.
 - For those **temporal-related** datasets (e.g., Sth-Sth), they adopt **ALL** the designs, including local UniBlocks, global UniBlocks and temporal downsampling.
 
+The following terms are used as variable while building the model. Some many not self-explainable and needs to be re-touch (TODO).
+
 ```yaml
 N_LAYERS: 4  # number of global UniBlocks
 MLP_DROPOUT: [0.5, 0.5, 0.5, 0.5]  # dropout for each global UniBlocks
