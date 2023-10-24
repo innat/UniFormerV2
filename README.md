@@ -16,6 +16,7 @@ This is unofficial `keras` implementation of [**UniFormerV2: Spatiotemporal Lear
 
 ## News
 
+- **[24-10-2023]**: [Kinetics-400](https://www.deepmind.com/open-source/kinetics) test data set can be found on kaggle, [link](https://www.kaggle.com/datasets/ipythonx/k4testset/data?select=videos_val).
 - **[20-10-2023]**: GPU(s), TPU-VM for fine-tune training are supported, [colab](https://github.com/innat/UniFormerV2/blob/main/notebooks/uniformerv2_video_classification.ipynb).
 - **[19-10-2023]**: UFV2 checkpoints for [HACS](http://hacs.csail.mit.edu/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
 - **[19-10-2023]**: UFV2 checkpoints for [ActivityNet](http://activity-net.org/) becomes available, [link](https://github.com/innat/UniFormerV2/releases/tag/v1.0).
